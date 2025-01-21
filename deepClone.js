@@ -10,7 +10,7 @@ function deepClone(obj) {
     }
 
     if (Array.isArray(obj)) {
-        clone = [];
+        const clone = [];
         for(const item of obj) {
             clone.push(deepClone(item));
         }
@@ -23,6 +23,5 @@ function deepClone(obj) {
             clone[item] = deepClone(obj[item]);
         }
     }
-
     return clone;
 }
