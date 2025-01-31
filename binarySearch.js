@@ -1,4 +1,5 @@
 function binarySearch(arr, value, left = 0, right = arr.length - 1) {
+    debugger;
     if (left > right) return -1;
 
     const middleIndex = Math.floor((left + right) / 2);
@@ -15,8 +16,7 @@ function binarySearch(arr, value, left = 0, right = arr.length - 1) {
 
 const sortedArray = [1, 3, 5, 7, 9, 11, 13];
 
-console.log(binarySearch(sortedArray, 7)); // 3
-console.log(binarySearch(sortedArray, 9)); // 4
+console.log(binarySearch(sortedArray, 2)); // 4
 console.log(binarySearch(sortedArray, 1)); // 0
 console.log(binarySearch(sortedArray, 13)); // 6
 console.log(binarySearch(sortedArray, 42)); // -1
