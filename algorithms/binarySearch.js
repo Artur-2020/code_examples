@@ -1,5 +1,4 @@
 function binarySearch(arr, value, left = 0, right = arr.length - 1) {
-    debugger;
     if (left > right) return -1;
 
     const middleIndex = Math.floor((left + right) / 2);
