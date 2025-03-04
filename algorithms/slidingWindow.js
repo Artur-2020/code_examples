@@ -3,20 +3,15 @@ function slidingWindow(arr, k) {
         throw new Error('Invalid arguments');
     }
 
-    // Шаг 1: Считаем сумму первого окна длиной k
     let maxSum = 0;
     for (let i = 0; i < k; i++) {
         maxSum += arr[i];
     }
-    let currentSum = maxSum; // Сохраняем текущую сумму для дальнейших вычислений
+    let currentSum = maxSum;
 
-    // Шаг 2: Сдвигаем окно по массиву
     for (let end = k; end < arr.length; end++) {
-        // Добавляем новый элемент справа
         currentSum += arr[end];
-        // Убираем элемент слева (start сдвигается)
         currentSum -= arr[end - k];
-        // Обновляем максимум
         maxSum = Math.max(maxSum, currentSum);
     }
 
